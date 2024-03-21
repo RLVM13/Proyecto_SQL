@@ -1,9 +1,9 @@
 CREATE TABLE "Bootcamp"(
     "id_Bootcamp" SERIAL NOT NULL,
-    "id_Vertical" VARCHAR(255) NOT NULL,
-    "Id_Campus" VARCHAR(255) NOT NULL,
-    "Id_Promocion" VARCHAR(255) NOT NULL,
-    "Id_Modalidad" VARCHAR(255) NOT NULL
+    "id_Vertical" INTEGER NOT NULL,
+    "Id_Campus" INTEGER NOT NULL,
+    "Id_Promocion" INTEGER NOT NULL,
+    "Id_Modalidad" INTEGER NOT NULL
 );
 ALTER TABLE
     "Bootcamp" ADD PRIMARY KEY("id_Bootcamp");
@@ -18,9 +18,9 @@ ALTER TABLE
     "Alumno" ADD PRIMARY KEY("id_Alumno");
 CREATE TABLE "Calificaciones"(
     "id_Calificacion" SERIAL NOT NULL,
-    "Id_Proyecto" VARCHAR(255) NOT NULL,
-    "Id_Alumno" VARCHAR(255) NOT NULL,
-    "Calificacion" DOUBLE PRECISION NOT NULL
+    "Id_Proyecto" INTEGER NOT NULL,
+    "Id_Alumno" INTEGER NOT NULL,
+    "Calificacion" VARCHAR(255) NOT NULL
 );
 ALTER TABLE
     "Calificaciones" ADD PRIMARY KEY("id_Calificacion");
@@ -52,8 +52,8 @@ ALTER TABLE
     "Campus" ADD PRIMARY KEY("id_Campus");
 CREATE TABLE "Claustro"(
     "id_Claustro" SERIAL NOT NULL,
-    "Id_Profesor" VARCHAR(255) NOT NULL,
-    "Id_Bootcamp" VARCHAR(255) NOT NULL
+    "Id_Profesor" INTEGER NOT NULL,
+    "Id_Bootcamp" INTEGER NOT NULL
 );
 ALTER TABLE
     "Claustro" ADD PRIMARY KEY("id_Claustro");
@@ -73,7 +73,7 @@ ALTER TABLE
 CREATE TABLE "Profesores"(
     "id_Profesor" SERIAL NOT NULL,
     "Nombre" VARCHAR(255) NOT NULL,
-    "id_rol" VARCHAR(255) NOT NULL
+    "id_rol" INTEGER NOT NULL
 );
 ALTER TABLE
     "Profesores" ADD PRIMARY KEY("id_Profesor");
