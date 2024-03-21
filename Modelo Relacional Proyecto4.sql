@@ -7,49 +7,56 @@ CREATE TABLE "Bootcamp"(
 );
 ALTER TABLE
     "Bootcamp" ADD PRIMARY KEY("id_Bootcamp");
+
 CREATE TABLE "Alumno"(
     "id_Alumno" SERIAL NOT NULL,
-    "Alumno" VARCHAR(255) NOT NULL,
-    "Email" VARCHAR(255) NOT NULL,
-    "Id_Bootcamp" VARCHAR(255) NOT NULL,
-    "Post_Bootcamp" VARCHAR(255) NOT NULL
+    "Alumno" VARCHAR(50) NOT NULL,
+    "Email" VARCHAR(30) NOT NULL,
+    "Id_Bootcamp" INTEGER NOT NULL,
+    "Post_Bootcamp" VARCHAR(30) NOT NULL
 );
 ALTER TABLE
     "Alumno" ADD PRIMARY KEY("id_Alumno");
+
 CREATE TABLE "Calificaciones"(
     "id_Calificacion" SERIAL NOT NULL,
     "Id_Proyecto" INTEGER NOT NULL,
     "Id_Alumno" INTEGER NOT NULL,
-    "Calificacion" VARCHAR(255) NOT NULL
+    "Calificacion" VARCHAR(30) NOT NULL
 );
 ALTER TABLE
     "Calificaciones" ADD PRIMARY KEY("id_Calificacion");
+
 CREATE TABLE "Roles"(
     "id_Rol" SERIAL NOT NULL,
-    "Rol" VARCHAR(255) NOT NULL
+    "Rol" VARCHAR(10) NOT NULL
 );
 ALTER TABLE
     "Roles" ADD PRIMARY KEY("id_Rol");
+
 CREATE TABLE "Promoción"(
     "id_Promocion" SERIAL NOT NULL,
-    "Promoción" VARCHAR(255) NOT NULL,
+    "Promoción" VARCHAR(30) NOT NULL,
     "Fecha_Comienzo" DATE NOT NULL
 );
 ALTER TABLE
     "Promoción" ADD PRIMARY KEY("id_Promocion");
+
 CREATE TABLE "Proyecto"(
     "id_Proyecto" SERIAL NOT NULL,
-    "Proyecto" VARCHAR(255) NOT NULL
+    "Proyecto" VARCHAR(30) NOT NULL
 );
 ALTER TABLE
     "Proyecto" ADD PRIMARY KEY("id_Proyecto");
+
 CREATE TABLE "Campus"(
     "id_Campus" SERIAL NOT NULL,
-    "Campus" VARCHAR(255) NOT NULL,
-    "Dirección" VARCHAR(255) NOT NULL
+    "Campus" VARCHAR(30) NOT NULL,
+    "Dirección" VARCHAR(100) NOT NULL
 );
 ALTER TABLE
     "Campus" ADD PRIMARY KEY("id_Campus");
+
 CREATE TABLE "Claustro"(
     "id_Claustro" SERIAL NOT NULL,
     "Id_Profesor" INTEGER NOT NULL,
@@ -59,24 +66,27 @@ ALTER TABLE
     "Claustro" ADD PRIMARY KEY("id_Claustro");
 CREATE TABLE "Modalidad"(
     "id_Modalidad" SERIAL NOT NULL,
-    "Modalidad" VARCHAR(255) NOT NULL
+    "Modalidad" VARCHAR(30) NOT NULL
 );
 ALTER TABLE
     "Modalidad" ADD PRIMARY KEY("id_Modalidad");
+
 CREATE TABLE "Vertical"(
     "id_Vertical" SERIAL NOT NULL,
-    "Vertical" VARCHAR(255) NOT NULL,
-    "Descripción" VARCHAR(255) NOT NULL
+    "Vertical" VARCHAR(30) NOT NULL,
+    "Descripción" VARCHAR(150) NOT NULL
 );
 ALTER TABLE
     "Vertical" ADD PRIMARY KEY("id_Vertical");
+
 CREATE TABLE "Profesores"(
     "id_Profesor" SERIAL NOT NULL,
-    "Nombre" VARCHAR(255) NOT NULL,
+    "Nombre" VARCHAR(50) NOT NULL,
     "id_rol" INTEGER NOT NULL
 );
 ALTER TABLE
     "Profesores" ADD PRIMARY KEY("id_Profesor");
+
 ALTER TABLE
     "Bootcamp" ADD CONSTRAINT "bootcamp_id_modalidad_foreign" FOREIGN KEY("Id_Modalidad") REFERENCES "Modalidad"("id_Modalidad");
 ALTER TABLE
