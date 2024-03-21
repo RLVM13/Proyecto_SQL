@@ -11,7 +11,7 @@ CREATE TABLE "Alumno"(
     "id_Alumno" SERIAL NOT NULL,
     "Alumno" VARCHAR(255) NOT NULL,
     "Email" VARCHAR(255) NOT NULL,
-    "Id_Bootcamp" VARCHAR(255) NOT NULL,
+    "Id_Bootcamp" INTEGER NOT NULL,
     "Post_Bootcamp" VARCHAR(255) NOT NULL
 );
 ALTER TABLE
