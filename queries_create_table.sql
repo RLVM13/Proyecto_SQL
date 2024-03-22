@@ -10,7 +10,7 @@ ALTER TABLE
 
 CREATE TABLE "Alumno"(
     "id_Alumno" SERIAL NOT NULL,
-    "Alumno" VARCHAR(50) NOT NULL,
+    "Alumno" VARCHAR(30) NOT NULL,
     "Email" VARCHAR(30) NOT NULL,
     "Id_Bootcamp" INTEGER NOT NULL,
     "Post_Bootcamp" VARCHAR(30) NOT NULL
@@ -20,8 +20,8 @@ ALTER TABLE
 
 CREATE TABLE "Calificaciones"(
     "id_Calificacion" SERIAL NOT NULL,
-    "Id_Proyecto" INTEGER NOT NULL,
     "Id_Alumno" INTEGER NOT NULL,
+    "Id_Proyecto" INTEGER NOT NULL,
     "Calificacion" VARCHAR(30) NOT NULL
 );
 ALTER TABLE
@@ -29,7 +29,7 @@ ALTER TABLE
 
 CREATE TABLE "Roles"(
     "id_Rol" SERIAL NOT NULL,
-    "Rol" VARCHAR(10) NOT NULL
+    "Rol" VARCHAR(5) NOT NULL
 );
 ALTER TABLE
     "Roles" ADD PRIMARY KEY("id_Rol");
@@ -64,6 +64,7 @@ CREATE TABLE "Claustro"(
 );
 ALTER TABLE
     "Claustro" ADD PRIMARY KEY("id_Claustro");
+
 CREATE TABLE "Modalidad"(
     "id_Modalidad" SERIAL NOT NULL,
     "Modalidad" VARCHAR(30) NOT NULL
