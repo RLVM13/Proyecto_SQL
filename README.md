@@ -10,11 +10,11 @@ Este proyecto proporcionará experiencia en la creación de bases de datos relac
 ### Nuestra Solución:
 El diagrama relacional nos permite visualizar cómo se relacionan las entidades entre sí, cómo funcionan sus relaciones y dónde se pueden mejorar estas relaciones.
 
-![Diagrama Relacional](./Diagrama%20Relacional.drawio.png)
+![Diagrama Relacional](./'Diagrama Relacional.png')
 
 Llegamos a la conclusión de formar 11 tablas en total en el Modelo Lógico para poder manejar la información de forma correcta. Evitamos las relaciones N:M para evitar la incoherencia a la hora de insertar datos.
 
-![Modelo Relacional](./Modelo%20Relacional%20Proyecto4.png)
+![Modelo Lógico](./'Modelo Lógico.png')
 
 Creamos un servirdor desde el servicio Render para poder alojar nuestra base de datos:
 https://dashboard.render.com/d/dpg-cntiin8l5elc73bfr5eg-a
